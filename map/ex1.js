@@ -22,7 +22,11 @@ En sortie: [
  */
 
 function getStringsLength(strings) {
-}
+    let contains = strings.map(function(number){
+      return number + " contains " + number.length + " characters";
+    });
+    return contains;
+};
 
 // Si besoin, tu peux toujours visualiser le résultat avec console.log,
 // mais alors, il faut alors lancer l'exercice avec node map/ex1

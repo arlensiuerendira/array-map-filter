@@ -5,7 +5,7 @@ représentant les rayons de cercles, et calcule, pour chacun, la circonférence 
 
 Formules pour les calculs :
 * Ciconférence  =  2 * Pi * rayon
-* Diamètre      =  Pi * rayon * rayon
+* Diamètre      =  Pi * rayon * rayon  ERREUR C'EST AREA ET NON PAS DIAMETRE
 
 En JavaScript, la valeur de Pi est donnée par Math.PI.
 Comme on n'a pas besoin d'une très grande précision en sortie,
@@ -52,7 +52,15 @@ Tableau de sortie correspondant (toFixed transforme les nombres en chaînes)
 */
 
 function getCirclesProperties(radiuses) {
-}
+  let calculate = radiuses.map(function(rad) {
+    return {
+      radius: rad,
+      circumference: (2 * Math.PI * rad).toFixed(3),
+      surface: (Math.PI * rad * rad).toFixed(3)
+    };
+  });
+  return calculate;
+};
 
 
 

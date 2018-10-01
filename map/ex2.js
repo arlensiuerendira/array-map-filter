@@ -43,7 +43,11 @@ En sortie: [
  */
 
 function getFoodCategories(foods) {
-}
+  let vegetarianism = foods.map(function(veganOrNot) {
+    return veganOrNot.isVegetarian?veganOrNot.food + " is suitable for vegetarians":veganOrNot.food + " is not suitable for vegetarians";
+  });
+  return vegetarianism;
+};
 
 
 
